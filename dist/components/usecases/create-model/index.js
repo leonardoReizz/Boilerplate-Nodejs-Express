@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createModelController = void 0;
+const model_repository_1 = require("../../repositories/model-repository");
+const create_model_controller_1 = require("./create-model-controller");
+const create_model_use_case_1 = require("./create-model-use-case");
+const modelRepository = new model_repository_1.ModelRepository();
+const createModelUseCase = new create_model_use_case_1.CreateModelUseCase(modelRepository);
+const createModelController = new create_model_controller_1.CreateModelController(createModelUseCase);
+exports.createModelController = createModelController;
