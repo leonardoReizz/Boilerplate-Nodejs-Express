@@ -7,8 +7,8 @@ export class ModelRepository implements IModelRepository {
     return {
       status: 200,
       data: {
-        message: 'ok'
-      }
-    }
+        message: "ok",
+      },
+    };
   }
 }

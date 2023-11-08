@@ -5,6 +5,6 @@ const modelRoutes = Router();
 
 modelRoutes.post("/", (request: Request, response: Response) => {
   return createModelController.handle(request, response);
-})
+});
 
 export { modelRoutes };

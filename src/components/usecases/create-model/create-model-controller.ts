@@ -6,13 +6,13 @@ export class CreateModelController {
   constructor(private createModelUseCase: CreateModelUseCase) {}
 
   async handle(request: Request, response: Response) {
-    const data: ICreateModelRequestDTO = request.body
+    const data: ICreateModelRequestDTO = request.body;
     try {
-      const create = await this.createModelUseCase.execute(data)
-      return response.status(create.data).json(create.data)
+      const create = await this.createModelUseCase.execute(data);
+      return response.status(create.data).json(create.data);
     } catch (e) {
       const errorMessage = (e as Error).message;
-      return response.status(400).json({message: errorMessage})
+      return response.status(400).json({ message: errorMessage });
     }
   }
 }

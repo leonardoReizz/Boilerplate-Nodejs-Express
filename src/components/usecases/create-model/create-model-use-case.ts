@@ -7,11 +7,9 @@ export class CreateModelUseCase {
   constructor(private modelRepository: ModelRepository) {}
 
   async execute(data: ICreateModelRequestDTO) {
-    if(!data.description)
-      throw new InvalidDescription();
-    if(!data.name)
-      throw new InvalidName();
-      
-    return await this.modelRepository.create(data)
+    if (!data.description) throw new InvalidDescription();
+    if (!data.name) throw new InvalidName();
+
+    return await this.modelRepository.create(data);
   }
 }

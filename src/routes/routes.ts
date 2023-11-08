@@ -5,4 +5,4 @@ const routes = Router();
 
 routes.use("/model", modelRoutes);
 
-export { routes }
+export { routes };
